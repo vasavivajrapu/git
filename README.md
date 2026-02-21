@@ -1,21 +1,21 @@
 # git
-man git
-man git-add
-man git-tag
+* man git
+* man git-add
+* man git-tag
 
 #installation , initialization and configuration
-git init - adds .git folder in the directory, which have all objects etc..
-git config --global user.name
-git config --global user.email
-git config --list
-git config user.name
-git config user.email
-git config -e , git config --local -e , git config --edit -> .git/config
-git config --global -e , git config --global --edit -> ~/.gitconfig
-git config --system -e -> /etc/gitconfig
-git config --global core.editor "code --wait"
-git config --get <key>
-git config --unset <key>
+* git init - adds .git folder in the directory, which have all objects etc..
+* git config --global user.name
+* git config --global user.email
+* git config --list
+* git config user.name
+* git config user.email
+* git config -e , git config --local -e , git config --edit -> .git/config
+* git config --global -e , git config --global --edit -> ~/.gitconfig
+* git config --system -e -> /etc/gitconfig
+* git config --global core.editor "code --wait"
+* git config --get <key>
+* git config --unset <key>
 git config --unset-all <key> - for multiple entries
 git config --remove-section <section>
 git config --global pull.rebase true/false

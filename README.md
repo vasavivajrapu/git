@@ -16,60 +16,60 @@
 * git config --global core.editor "code --wait"
 * git config --get <key>
 * git config --unset <key>
-git config --unset-all <key> - for multiple entries
-git config --remove-section <section>
-git config --global pull.rebase true/false
+* git config --unset-all <key> - for multiple entries
+* git config --remove-section <section>
+* git config --global pull.rebase true/false
 
 
 #porcelain (high level) and plumbing (low level) commands
-plumbing : useful for understanding gits internals
-git cat-file -p <hash>
-git apply
-git commit-tree
-git hash-object
+* plumbing : useful for understanding gits internals
+* git cat-file -p <hash>
+* git apply
+* git commit-tree
+* git hash-object
 
 porcelain :
-git status - current status of changes
-git status -s
-git add  
-git add -p
-git commit -am
-git commit -m
-git commit --amend (to edit commit msg but chnages the commit hash)
-git log --oneline --graph
-git log --oneline -p (patch - gives diff also)
-git log --oneline --stat
-git --no-pager log -n 10 --oneline --parents
-git log --decorate=short (default) | git log --decorate=full | git log --decorate=no
-git log branchname
-git log origin/branch
-git log --oneline --graph --decorate --parents 
-git push 
-git pull
-git merge branchname
-git rebase branchname
-git reset --soft commithash
-git reset --soft HEAD~1
-git reset --hard HEAD~1
-git diff --staged
-git diff
-git remote add name uri
-git fetch 
-git merge remote/branch
-git ls-remote
-git reflog (it tracks the HEAD)
+* git status - current status of changes
+* git status -s
+* git add  
+* git add -p
+* git commit -am
+* git commit -m
+* git commit --amend (to edit commit msg but chnages the commit hash)
+* git log --oneline --graph
+* git log --oneline -p (patch - gives diff also)
+* git log --oneline --stat
+* git --no-pager log -n 10 --oneline --parents
+* git log --decorate=short (default) | git log --decorate=full | git log --decorate=no
+* git log branchname
+* git log origin/branch
+* git log --oneline --graph --decorate --parents 
+* git push 
+* git pull
+* git merge branchname
+* git rebase branchname
+* git reset --soft commithash
+* git reset --soft HEAD~1
+* git reset --hard HEAD~1
+* git diff --staged
+* git diff
+* git remote add name uri
+* git fetch 
+* git merge remote/branch
+* git ls-remote
+* git reflog (it tracks the HEAD)
 
 #branching - branch is a pointer to a commit
-git branch
-git branch -m oldname newname
-git branch my_new_branch
-git branch -d branchname
-git branch -D branchname
-git switch -c my_new_branch -> -c tells git to create branch it it doesnt exists
-git switch branchname
-.gitignore - can add list of files names to ignore by git
-.git/info/exclude
-.git/HEAD
+* git branch
+* git branch -m oldname newname
+* git branch my_new_branch
+* git branch -d branchname
+* git branch -D branchname
+* git switch -c my_new_branch -> -c tells git to create branch it it doesnt exists
+* git switch branchname
+* gitignore - can add list of files names to ignore by git
+* git/info/exclude
+* git/HEAD
 
 #content :
 * index - the tracked part of changes at a point of time

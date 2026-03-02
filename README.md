@@ -20,7 +20,7 @@
 * git config --unset-all <key> - for multiple entries
 * git config --remove-section <section>
 * git config --global pull.rebase true/false
-
+* git config --global rerere.enabled false (.git/rr-cache)
 
 #porcelain (high level) and plumbing (low level) commands
 * plumbing : useful for understanding gits internals
@@ -106,3 +106,5 @@ porcelain :
 * we can also merge branches between local and remote 
 * github/gitlab is a central place to share ur code and collab with others - is for hosting remotes.
 * fork is for copying the repo from owners to our account, not a git operation.
+
+* while rebase , we will be in a no branch situation.

@@ -21,6 +21,7 @@
 * git config --remove-section <section>
 * git config --global pull.rebase true/false
 * git config --global rerere.enabled false (.git/rr-cache)
+* git config --global alias.checkout switch
 
 #porcelain (high level) and plumbing (low level) commands
 * plumbing : useful for understanding gits internals
@@ -45,10 +46,14 @@ porcelain :
 * git log branchname
 * git log origin/branch
 * git log --oneline --graph --decorate --parents 
-* git push 
+* git push origin branch
 * git pull
+* git pull origin main
+* git branch --set-upstream-to=origin/main main
+* git remote-add 
 * git merge branchname
 * git rebase branchname
+* git rebase -i HEAD~n
 * git reset --soft commithash
 * git reset --soft HEAD~1
 * git reset --hard HEAD~1
@@ -59,6 +64,25 @@ porcelain :
 * git merge remote/branch
 * git ls-remote
 * git reflog (it tracks the HEAD)
+* git statsh
+* git stash -p
+* git stash list
+* git stash pop (literally like a stack)
+* git stash apply | git stash apply stash@{2}
+* gti stash drop | git stash drop stash@{2}
+* git stash -m "message"
+* git stash --message "message"
+* git revert commitno
+* git diff | git diff HEAD~1 | git diff branch1 branch2 | git diff commit1 commit2
+* git cherry-pick commit (to pick a commit from anywhere add to our current branch)
+* git cherry-pick --abort
+* git bisect start
+* git bisect bad | git bisect bad commit
+* git bisect good |  git bisect good commit
+* git bisect reset
+* git bisect run
+* git worktree list
+* 
 
 #branching - branch is a pointer to a commit
 * git branch
@@ -108,3 +132,7 @@ porcelain :
 * fork is for copying the repo from owners to our account, not a git operation.
 
 * while rebase , we will be in a no branch situation.
+* squash is a process of commibing commits into few commits
+* squash will be obtained by an interactive rebase
+* stash is to keep our index and workdir to keep safe without commiting, makes like a commit and puts it in stack
+* bisect allows us to do abinary serach on (o(log n)) to find the bug commitish or we can say to find a change

@@ -82,7 +82,11 @@ porcelain :
 * git bisect reset
 * git bisect run
 * git worktree list
-* 
+* git worktree [add] [branch]
+* git worktree remove [worktree]
+* git worktree prune
+* git tag
+* git tag -a "tag name" -m "message"
 
 #branching - branch is a pointer to a commit
 * git branch
@@ -136,3 +140,5 @@ porcelain :
 * squash will be obtained by an interactive rebase
 * stash is to keep our index and workdir to keep safe without commiting, makes like a commit and puts it in stack
 * bisect allows us to do abinary serach on (o(log n)) to find the bug commitish or we can say to find a change
+* tag is an immutable pointer to a commit
+* tag is a name linked to a commit that doesnt move between commits unlike a branch

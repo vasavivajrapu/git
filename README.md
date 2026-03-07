@@ -4,7 +4,7 @@
 * man git-add
 * man git-tag
 
-#installation , initialization and configuration
+# installation , initialization and configuration
 * git init - adds .git folder in the directory, which have all objects etc..
 * git config --global user.name
 * git config --global user.email
@@ -23,14 +23,14 @@
 * git config --global rerere.enabled false (.git/rr-cache)
 * git config --global alias.checkout switch
 
-#porcelain (high level) and plumbing (low level) commands
+# porcelain (high level) and plumbing (low level) commands
 * plumbing : useful for understanding gits internals
 * git cat-file -p <hash>
 * git apply
 * git commit-tree
 * git hash-object
 
-porcelain :
+# porcelain :
 * git status - current status of changes
 * git status -s
 * git add  
@@ -50,7 +50,8 @@ porcelain :
 * git pull
 * git pull origin main
 * git branch --set-upstream-to=origin/main main
-* git remote-add 
+* git remote add
+* git remote set-url --push origin <new_push_url>
 * git merge branchname
 * git rebase branchname
 * git rebase -i HEAD~n
@@ -64,7 +65,7 @@ porcelain :
 * git merge remote/branch
 * git ls-remote
 * git reflog (it tracks the HEAD)
-* git statsh
+* git stash
 * git stash -p
 * git stash list
 * git stash pop (literally like a stack)
@@ -86,21 +87,27 @@ porcelain :
 * git worktree remove [worktree]
 * git worktree prune
 * git tag
-* git tag -a "tag name" -m "message"
+* git tag -a "tag name" -m "message" | git tag [tagname] | git tag [tagname] [commithash]
+* git show [tagname]
+* git tag -d [tagname] | git push origin --delete [tagname]
+* git push origin [tagname] | git push origin --tags
+* gti checkout [tagname] | git checkout -b [branchname] [tagname]
 
-#branching - branch is a pointer to a commit
+# branching - branch is a pointer to a commit
 * git branch
+* git checkout branch
+* git checkout -b branch
 * git branch -m oldname newname
 * git branch my_new_branch
 * git branch -d branchname
 * git branch -D branchname
 * git switch -c my_new_branch -> -c tells git to create branch it it doesnt exists
 * git switch branchname
-* gitignore - can add list of files names to ignore by git
-* git/info/exclude
+* .gitignore - can add list of files names to ignore by git
+* git/info/exclude - for local ignoring files
 * git/HEAD
 
-#content :
+# content :
 * index - the tracked part of changes at a point of time
 * commit - a snapshot of whole repo at point of time , commit is not diff of previous commits
 * commit sha (min 7)- unique hash, which depends on author,commit message, date and time, parent (previous commit)
@@ -130,8 +137,8 @@ porcelain :
 
 * remote repo is just an another repo , can be a local repo
 * adding a remote to our git repo doesn't mean that we automatically have all the contents , but we need to fetch
-* fetch - copies all the contents og .git/objects dir and other infor from repo into current one (but we wont get in local , need to merge)
-* we can also merge branches between local and remote 
+* fetch - copies all the contents of .git/objects dir and other infor from repo into current one (but we wont get in local , need to merge)
+* we can also merge branches between local and remote
 * github/gitlab is a central place to share ur code and collab with others - is for hosting remotes.
 * fork is for copying the repo from owners to our account, not a git operation.
 
@@ -139,6 +146,11 @@ porcelain :
 * squash is a process of commibing commits into few commits
 * squash will be obtained by an interactive rebase
 * stash is to keep our index and workdir to keep safe without commiting, makes like a commit and puts it in stack
-* bisect allows us to do abinary serach on (o(log n)) to find the bug commitish or we can say to find a change
+* bisect allows us to do a binary serach on (o(log n)) to find the bug commitish or we can say to find a change.
 * tag is an immutable pointer to a commit
 * tag is a name linked to a commit that doesnt move between commits unlike a branch
+
+## to learn : 
+* merge strategies
+* try someother name instead origin
+* hooks
